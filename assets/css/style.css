@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+
+.svg-builds path {
+    fill: #05ffff00;
+    stroke: #05ffff00;
+    cursor: pointer;
+}
+
+.svg-builds path:hover {
+    fill: #05FFFF;
+    stroke: #05FFFF;
+    stroke-width: 3;
+    fill-opacity: .3;
+}
+
+.builds-info {
+    padding: 48px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 10px;
+}
+
+.builds-info-title {
+    margin-bottom: 24px;
+}
+
+.info-list {
+    padding: 24px;
+    list-style: none;
+    border-radius: 10px;
+}
+
+.list-item{
+    margin-bottom: 12px;
+}
