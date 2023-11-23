@@ -1,0 +1,40 @@
+ 
+.custom-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0000004a;
+     
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal-content {
+    background: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 700px;
+
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    transform: rotate(180deg);
+}
+
+.close-modal svg,
+close-modal img {
+    width: 24px;
+    height: 24px;
+}
