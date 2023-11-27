@@ -1,3 +1,17 @@
+const buildNav = document.querySelector('.builds-nav')
+const buildInfo = document.querySelector('.builds-info') 
+
+function reportWindowSize() {
+    const buildNavHeight = buildNav.offsetHeight
+    const buildInfoHeight = buildInfo.offsetHeight
+    const calcHeight = buildNavHeight - buildInfoHeight - 15;
+    buildInfo.style.top = calcHeight + "px" ;
+} reportWindowSize()
+
+window.onresize = reportWindowSize;
+
+
+
 const installBuilds =()=> {
     const buildItem = document.querySelectorAll('.build-item path')
     const buildItemAdress = document.querySelector('#adress')
@@ -13,7 +27,7 @@ const installBuilds =()=> {
 
         const saleItem = document.querySelectorAll('.sales')
    
-        saleItem.forEach((sales, index) =>{
+        saleItem.forEach((sales, index) => {
             sales.setAttribute('data-modal', 'modal-' + (index + 1))
         })
 
@@ -63,48 +77,22 @@ function installModal() {
         openModal.classList.remove('show-modal')
         openModal.style.display = "none";
     } 
+
+    window.addEventListener("keydown", function(event){
+        if (event.key === "Escape"){
+            onCloseModal()
+        }
+    });
+ 
+ 
+    window.onclick = (event) => customModal.forEach(item => {
+        event.target == item ? onCloseModal() : false
+        }
+    );
 }
 document.querySelector('.custom-modal') ? installModal() : false;
 
+ 
 
-//!!! data-modal="modal-2
+ 
 
-// function installModal() {
-//     const body = document.body;
-//     const callModalBtns = document.querySelectorAll("[data-modal]");
-//     const modalClose = document.querySelectorAll('.modal-close, .animate-box')
-//     const modalOverlay = document.querySelectorAll('.modal')
-
-//     const overflowHiddenOn = (element) => element.classList.add('overflow-hidden');
-//     const overflowHiddenOff = (element) => element.classList.remove('overflow-hidden');
-//     const displayBlock = (element) => element.style.display = "block";
-
-//     const closeModal = () => {
-//         modalOverlay.forEach(item => item.style.display = "none");
-//         overflowHiddenOff(body);
-//     }
-
-//     const getDataAttr = (selector) => selector.forEach(selector => {
-
-//         selector.addEventListener('click', (event) => {
-//             event.preventDefault();
-
-//             let id = selector.getAttribute('data-modal');
-//             const thisModal = document.querySelector("#" + id);
-
-//             displayBlock(thisModal);
-//             overflowHiddenOn(body);
-//         });
-//     });
-
-//    getDataAttr(callModalBtns)
-
-//     modalClose.forEach(btnClose => {
-//         btnClose.addEventListener('click', () => {
-//             closeModal();
-//         })
-//     })
-//     window.onclick = (event) => modalOverlay.forEach(item => event.target == item ? closeModal() : false)
-
-// }
-// document.querySelector('.modal') ? installModal() : false;

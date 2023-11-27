@@ -22,14 +22,17 @@
 }
 
 .close-modal {
-    position: absolute;
-    right: 20px;
-    top: 20px;
     transition: .3s;
     cursor: pointer;
 }
 
-.close-modal:hover {
+.close-modal.cross{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.close-modal.cross:hover {
     transform: rotate(180deg);
 }
 
