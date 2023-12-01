@@ -53,3 +53,68 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+/*floor-item*/
+.flat {
+    cursor: pointer;
+}
+
+.flat:hover .flat-path {
+    stroke: #11ff00;
+    fill: #00ff3357;
+}
+
+.flat.active .flat-path {
+    fill: #00ff488d
+}
+
+.flat-path {
+    fill: rgba(255, 255, 0, 0)
+}
+.flat .status-cell{
+    fill: #00DEFC;
+}
+
+.status-border,
+.status-cell {
+    stroke:black;
+    stroke-width: 2; 
+    fill: #fff;
+}
+
+.flat-text {
+    white-space: pre;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0em;
+    fill: #000;
+}
+
+.booking .status-cell{
+    fill: #6B68FF;
+}
+
+.sold .status-cell{
+    fill: #D34E4E;
+}
+
+.action .status-cell{
+    fill: #80D34E;
+}
+
+
+
+.flat-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid;
+}
+
+.flat-item {
+    border: 1px solid;
+    padding: 12px;
+}
